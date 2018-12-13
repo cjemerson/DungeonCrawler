@@ -1,0 +1,16 @@
+# Create a list of four entities populating the screen at different locations
+
+# Valid Commands: 
+# transform <4x4_MATRIX>	# Constructs the specified world matrix for the entity
+# translate <X> <Y> <Z>		# Translates the entity's world matrix
+# rotate <DEGREES>			# Rotate the entity's world matrix
+# position <X> <Y>			# Sets a position on a tilemap to start at
+# sprites <SPACED_LIST>		# Uses the first sprite index
+# alive <NUM_LIVES>			# If the number is negative the entity will not be drawn
+# updir <dir>				# UP = 0, RIGHT = 1, DOWN = 2, LEFT = 3
+
+entity player
+position 1 46
+sprites 16 17 18 19
+alive 1
+updir 2

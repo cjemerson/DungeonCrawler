@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+	<meta name="description" content="Fall 2018 CS 480/680 Computer Graphics Fundamentals Research Project site">
+	<meta name="robots" content="index/nofollow">
+	<meta name="author" content="Jonathan B. Metzgar">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="./assets/favicon.png">
+	<link rel="shortcut icon" href="./assets/favicon.ico">
+	<link rel="apple-touch-icon" href="./assets/favicon.png">
+	<script>
+		let g_PageTitle = "Dungeon Crawler";
+		let g_PageAuthor = "C. Emerson";
+		let loc = window.location.href.search(".html");
+		document.write("<title>" + g_PageTitle + "</title>");
+	</script>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<article>
+		<header>
+			<h1 class="uaf" style="font-size: 1.2em;">
+				<a href="index.html">
+					<script>
+						document.write(g_PageTitle);
+					</script>
+				</a>
+			</h1>
+			<h2 style="font-size: 1em;">
+				<script>
+					document.write("by " + g_PageAuthor);
+				</script>
+			</h2>
+			<hr class="goldhr" />
+		</header>
+
+		<div class="app" id="app"></div>
+		<div class="uiText" id="uiText"></div>
+		<div class="desc" id="desc">
+			A basic implementation of a dungeon crawler... <br/>
+			Note the view scrolling and the tilemap. The tile map is represented by a vertex array which is only built once.
+		</div>
+		<button onclick="hflog.clear()">Clear Log</button>
+		<div class="log" id="log"></div>
+
+		<script src="library.js"></script>
+
+		<footer>
+			<hr class="bluehr" />
+			<script>
+				document.write("<a style=\"color:blue\" href=\"https://github.com/cjemerson/\"> Navigate back to Github </a>");
+			</script>
+		</footer>
+		
+	</article>
+
+	<script>
+		window.onload = () => {
+			let app = new DungeonCrawlerApp();
+			app.run();
+		};
+	</script>
+</body>
+
+</html>
